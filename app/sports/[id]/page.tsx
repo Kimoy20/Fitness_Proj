@@ -317,6 +317,38 @@ const sportData: { [key: string]: SportDetail } = {
           },
         ],
       },
+      weeklyMeals: {
+        monday: {
+          breakfast: "Swimmer's Power Oatmeal with protein powder",
+          lunch: "Grilled chicken salad with quinoa",
+          dinner: "Salmon with sweet potato and vegetables",
+          snacks: "Greek yogurt with berries",
+        },
+        tuesday: {
+          breakfast: "Whole grain toast with almond butter and banana",
+          lunch: "Turkey wrap with vegetables",
+          dinner: "Lean beef with brown rice and broccoli",
+          snacks: "Protein shake",
+        },
+        wednesday: {
+          breakfast: "Egg white omelet with vegetables",
+          lunch: "Tuna salad with whole grain crackers",
+          dinner: "Chicken stir-fry with mixed vegetables",
+          snacks: "Apple with almond butter",
+        },
+        thursday: {
+          breakfast: "Smoothie with protein powder and fruits",
+          lunch: "Quinoa bowl with roasted vegetables",
+          dinner: "Grilled fish with asparagus",
+          snacks: "Trail mix",
+        },
+        friday: {
+          breakfast: "Oatmeal with nuts and seeds",
+          lunch: "Chicken and avocado sandwich",
+          dinner: "Pasta with lean meat sauce",
+          snacks: "Cottage cheese with fruit",
+        },
+      },
       supplements: [
         "whey protein",
         "omega-3 fish oil",
@@ -1054,6 +1086,38 @@ const sportData: { [key: string]: SportDetail } = {
           },
         ],
       },
+      weeklyMeals: {
+        monday: {
+          breakfast: "Cyclist's Energy Oatmeal with fruits and nuts",
+          lunch: "Chicken & Quinoa Bowl with roasted vegetables",
+          dinner: "Grilled salmon with sweet potato and asparagus",
+          snacks: "Energy bars with electrolytes",
+        },
+        tuesday: {
+          breakfast: "Whole grain toast with avocado and eggs",
+          lunch: "Mediterranean pasta with lean protein",
+          dinner: "Lean beef with brown rice and vegetables",
+          snacks: "Greek yogurt with honey",
+        },
+        wednesday: {
+          breakfast: "Smoothie with protein powder and banana",
+          lunch: "Turkey and vegetable wrap",
+          dinner: "Chicken stir-fry with quinoa",
+          snacks: "Trail mix and dried fruits",
+        },
+        thursday: {
+          breakfast: "Egg white omelet with vegetables",
+          lunch: "Tuna salad with whole grain crackers",
+          dinner: "Pasta with turkey meat sauce",
+          snacks: "Apple with almond butter",
+        },
+        friday: {
+          breakfast: "Cottage cheese with fruits and nuts",
+          lunch: "Grilled chicken Caesar salad",
+          dinner: "Fish tacos with avocado salsa",
+          snacks: "Protein shake with banana",
+        },
+      },
       supplements: [
         "electrolytes",
         "vitamin B complex",
@@ -1222,6 +1286,38 @@ const sportData: { [key: string]: SportDetail } = {
             fat: 12,
           },
         ],
+      },
+      weeklyMeals: {
+        monday: {
+          breakfast: "Bodybuilder's Oatmeal with protein powder",
+          lunch: "Grilled chicken breast with brown rice",
+          dinner: "Lean steak with sweet potato and vegetables",
+          snacks: "Protein shake with banana",
+        },
+        tuesday: {
+          breakfast: "Egg white omelet with vegetables",
+          lunch: "Turkey breast with quinoa and avocado",
+          dinner: "Salmon with asparagus and brown rice",
+          snacks: "Greek yogurt with nuts",
+        },
+        wednesday: {
+          breakfast: "Protein smoothie with oats and berries",
+          lunch: "Lean beef wrap with vegetables",
+          dinner: "Chicken stir-fry with mixed vegetables",
+          snacks: "Cottage cheese with fruit",
+        },
+        thursday: {
+          breakfast: "Whole grain toast with peanut butter and banana",
+          lunch: "Tuna salad with whole grain crackers",
+          dinner: "Pork chops with roasted vegetables",
+          snacks: "Protein bars",
+        },
+        friday: {
+          breakfast: "Scrambled eggs with whole grain toast",
+          lunch: "Chicken Caesar salad with extra protein",
+          dinner: "Lean ground beef with pasta",
+          snacks: "Chocolate milk and protein powder",
+        },
       },
       supplements: [
         "whey protein",
