@@ -1,0 +1,50 @@
+{
+  "id": "basketball",
+  "name": "Basketball",
+  "category": "team",
+  "difficulty": "intermediate",
+  "intensity": "high",
+  "environment": "indoor",
+  "social": "large_group",
+  "barrierToEntry": {
+    "cost": "$",
+    "gear": ["Basketball shoes", "basketball", "athletic clothing"],
+    "learningCurve": "moderate"
+  },
+  "fitnessROI": {
+    "primaryMuscles": ["legs", "core", "cardiovascular system", "upper body"],
+    "cardio": "high",
+    "strength": "medium",
+    "flexibility": "medium",
+    "benefits": [
+      "teamwork",
+      "cardiovascular health",
+      "agility",
+      "hand-eye coordination",
+      "social bonding"
+    ],
+    "caloriesBurned": {
+      "per30Min": 280,
+      "per60Min": 560,
+      "perHour": 560,
+      "notes": "Based on competitive basketball game for 155lb person"
+    }
+  },
+  "vibeCheck": {
+    "community": "competitive",
+    "culture": "Basketball has a competitive but inclusive culture. Pickup games welcome players of all skill levels, while organized leagues offer more structured competition.",
+    "bestFor": [
+      "team players",
+      "competitive people",
+      "social athletes",
+      "those wanting high-intensity cardio"
+    ]
+  },
+  "timeCommitment": {
+    "sessionLength": "60-120 min",
+    "frequency": "2-4x/week",
+    "travelRequired": "minimal"
+  },
+  "tags": ["team", "competitive", "cardio", "social", "indoor"],
+  "description": "Fast-paced team sport combining athleticism, strategy, and social interaction."
+}

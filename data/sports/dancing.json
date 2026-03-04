@@ -1,0 +1,50 @@
+{
+  "id": "dancing",
+  "name": "Dancing",
+  "category": "individual",
+  "difficulty": "beginner",
+  "intensity": "medium",
+  "environment": "indoor",
+  "social": "large_group",
+  "barrierToEntry": {
+    "cost": "$",
+    "gear": ["Comfortable shoes", "dance clothes"],
+    "learningCurve": "gentle"
+  },
+  "fitnessROI": {
+    "primaryMuscles": ["full body", "coordination", "rhythm", "cardio"],
+    "cardio": "medium",
+    "strength": "medium",
+    "flexibility": "high",
+    "benefits": [
+      "coordination",
+      "rhythm",
+      "social connection",
+      "self-expression",
+      "stress relief"
+    ],
+    "caloriesBurned": {
+      "per30Min": 150,
+      "per60Min": 300,
+      "perHour": 300,
+      "notes": "Based on moderate dancing for 155lb person"
+    }
+  },
+  "vibeCheck": {
+    "community": "casual",
+    "culture": "Dance communities are generally welcoming and celebratory. From formal dance classes to social dance events, there's emphasis on enjoyment and self-expression.",
+    "bestFor": [
+      "social people",
+      "creative individuals",
+      "those wanting fun exercise",
+      "music lovers"
+    ]
+  },
+  "timeCommitment": {
+    "sessionLength": "45-90 min",
+    "frequency": "2-3x/week",
+    "travelRequired": "minimal"
+  },
+  "tags": ["social", "creative", "coordination", "music", "fun"],
+  "description": "Joyful expression through movement that combines fitness with creativity and social connection."
+}

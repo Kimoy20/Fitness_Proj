@@ -1,0 +1,60 @@
+{
+  "id": "weightlifting",
+  "name": "Weightlifting",
+  "category": "individual",
+  "difficulty": "intermediate",
+  "intensity": "high",
+  "environment": "indoor",
+  "social": "mixed",
+  "barrierToEntry": {
+    "cost": "$$",
+    "gear": [
+      "Gym membership",
+      "workout clothes",
+      "optional: weightlifting belt"
+    ],
+    "learningCurve": "moderate"
+  },
+  "fitnessROI": {
+    "primaryMuscles": ["all major muscle groups", "strength", "bone density"],
+    "cardio": "low",
+    "strength": "high",
+    "flexibility": "medium",
+    "benefits": [
+      "muscle building",
+      "strength gains",
+      "bone density",
+      "metabolism boost",
+      "confidence"
+    ],
+    "caloriesBurned": {
+      "per30Min": 120,
+      "per60Min": 240,
+      "perHour": 240,
+      "notes": "Based on moderate weightlifting for 155lb person"
+    }
+  },
+  "vibeCheck": {
+    "community": "mixed",
+    "culture": "Gym environments vary from hardcore powerlifting gyms to commercial fitness centers. Most serious lifters are respectful and willing to share knowledge.",
+    "bestFor": [
+      "strength seekers",
+      "muscle builders",
+      "goal-oriented people",
+      "those wanting measurable progress"
+    ]
+  },
+  "timeCommitment": {
+    "sessionLength": "45-90 min",
+    "frequency": "3-4x/week",
+    "travelRequired": "minimal"
+  },
+  "tags": [
+    "strength",
+    "muscle building",
+    "gym",
+    "progressive overload",
+    "bone health"
+  ],
+  "description": "Progressive resistance training for building strength, muscle mass, and overall power."
+}

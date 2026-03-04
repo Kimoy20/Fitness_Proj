@@ -1,0 +1,49 @@
+{
+  "id": "rock-climbing",
+  "name": "Rock Climbing",
+  "category": "individual",
+  "difficulty": "intermediate",
+  "intensity": "high",
+  "environment": "both",
+  "social": "small_group",
+  "barrierToEntry": {
+    "cost": "$$$",
+    "gear": ["Climbing shoes", "Harness", "Chalk bag", "Belay device"],
+    "learningCurve": "moderate"
+  },
+  "fitnessROI": {
+    "primaryMuscles": ["forearms", "back", "biceps", "core", "legs"],
+    "cardio": "medium",
+    "strength": "high",
+    "flexibility": "medium",
+    "benefits": [
+      "problem-solving skills",
+      "full body strength",
+      "mental focus",
+      "confidence building"
+    ],
+    "caloriesBurned": {
+      "per30Min": 280,
+      "per60Min": 560,
+      "perHour": 560,
+      "notes": "Based on moderate rock climbing for 155lb person"
+    }
+  },
+  "vibeCheck": {
+    "community": "supportive",
+    "culture": "Climbing gyms have a collaborative atmosphere where climbers encourage each other. There's strong emphasis on safety and helping others learn techniques.",
+    "bestFor": [
+      "problem solvers",
+      "strength builders",
+      "adventure seekers",
+      "people who like measurable progress"
+    ]
+  },
+  "timeCommitment": {
+    "sessionLength": "60-120 min",
+    "frequency": "2-4x/week",
+    "travelRequired": "minimal"
+  },
+  "tags": ["strength", "problem solving", "adventure", "indoor", "outdoor"],
+  "description": "Build strength and problem-solving skills while scaling vertical challenges."
+}

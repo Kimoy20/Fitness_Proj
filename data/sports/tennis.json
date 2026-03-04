@@ -1,0 +1,50 @@
+{
+  "id": "tennis",
+  "name": "Tennis",
+  "category": "individual",
+  "difficulty": "intermediate",
+  "intensity": "high",
+  "environment": "outdoor",
+  "social": "small_group",
+  "barrierToEntry": {
+    "cost": "$$",
+    "gear": ["Tennis racket", "tennis shoes", "tennis balls"],
+    "learningCurve": "moderate"
+  },
+  "fitnessROI": {
+    "primaryMuscles": ["legs", "core", "arms", "cardiovascular system"],
+    "cardio": "high",
+    "strength": "medium",
+    "flexibility": "high",
+    "benefits": [
+      "hand-eye coordination",
+      "agility",
+      "cardio health",
+      "social interaction",
+      "strategic thinking"
+    ],
+    "caloriesBurned": {
+      "per30Min": 240,
+      "per60Min": 480,
+      "perHour": 480,
+      "notes": "Based on casual tennis doubles for 155lb person"
+    }
+  },
+  "vibeCheck": {
+    "community": "competitive",
+    "culture": "Tennis clubs often have a competitive but friendly atmosphere. Players respect the rules and etiquette of the game, with opportunities for both casual and competitive play.",
+    "bestFor": [
+      "competitive people",
+      "social athletes",
+      "strategic thinkers",
+      "those wanting to improve coordination"
+    ]
+  },
+  "timeCommitment": {
+    "sessionLength": "60-120 min",
+    "frequency": "2-3x/week",
+    "travelRequired": "minimal"
+  },
+  "tags": ["competitive", "social", "coordination", "outdoor", "strategic"],
+  "description": "Fast-paced racket sport combining athleticism, strategy, and social interaction."
+}

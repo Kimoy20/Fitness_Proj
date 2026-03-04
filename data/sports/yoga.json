@@ -1,0 +1,62 @@
+{
+  "id": "yoga",
+  "name": "Yoga",
+  "category": "individual",
+  "difficulty": "beginner",
+  "intensity": "low",
+  "environment": "indoor",
+  "social": "mixed",
+  "barrierToEntry": {
+    "cost": "$",
+    "gear": ["Yoga mat", "comfortable clothing"],
+    "learningCurve": "gentle"
+  },
+  "fitnessROI": {
+    "primaryMuscles": [
+      "core",
+      "flexibility",
+      "balance",
+      "mind-body connection"
+    ],
+    "cardio": "low",
+    "strength": "medium",
+    "flexibility": "high",
+    "benefits": [
+      "stress reduction",
+      "improved flexibility",
+      "better posture",
+      "mindfulness",
+      "injury prevention"
+    ],
+    "caloriesBurned": {
+      "per30Min": 90,
+      "per60Min": 180,
+      "perHour": 180,
+      "notes": "Based on Hatha yoga for 155lb person"
+    }
+  },
+  "vibeCheck": {
+    "community": "supportive",
+    "culture": "Yoga studios are typically welcoming spaces focused on personal growth and mindfulness. The community is generally non-judgmental and supportive of all skill levels.",
+    "bestFor": [
+      "stress management",
+      "flexibility seekers",
+      "mindfulness practitioners",
+      "people recovering from injury",
+      "desk workers"
+    ]
+  },
+  "timeCommitment": {
+    "sessionLength": "30-90 min",
+    "frequency": "2-5x/week",
+    "travelRequired": "none"
+  },
+  "tags": [
+    "flexibility",
+    "mindfulness",
+    "low impact",
+    "stress relief",
+    "beginner friendly"
+  ],
+  "description": "Ancient practice combining physical postures, breathing techniques, and meditation for overall wellness."
+}

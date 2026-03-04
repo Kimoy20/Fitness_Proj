@@ -1,0 +1,56 @@
+{
+  "id": "martial-arts",
+  "name": "Martial Arts",
+  "category": "combat",
+  "difficulty": "intermediate",
+  "intensity": "high",
+  "environment": "indoor",
+  "social": "small_group",
+  "barrierToEntry": {
+    "cost": "$$",
+    "gear": ["Uniform (gi)", "protective gear", "membership dues"],
+    "learningCurve": "steep"
+  },
+  "fitnessROI": {
+    "primaryMuscles": ["full body", "core", "flexibility", "balance"],
+    "cardio": "high",
+    "strength": "high",
+    "flexibility": "high",
+    "benefits": [
+      "self-defense",
+      "discipline",
+      "confidence",
+      "mental focus",
+      "cultural appreciation"
+    ],
+    "caloriesBurned": {
+      "per30Min": 350,
+      "per60Min": 700,
+      "perHour": 700,
+      "notes": "Based on moderate martial arts training for 155lb person"
+    }
+  },
+  "vibeCheck": {
+    "community": "supportive",
+    "culture": "Martial arts dojos emphasize respect, discipline, and personal growth. There's a strong sense of tradition and hierarchy, with senior students helping beginners.",
+    "bestFor": [
+      "discipline seekers",
+      "self-defense learners",
+      "those wanting structure",
+      "cultural enthusiasts"
+    ]
+  },
+  "timeCommitment": {
+    "sessionLength": "60-90 min",
+    "frequency": "2-4x/week",
+    "travelRequired": "minimal"
+  },
+  "tags": [
+    "self-defense",
+    "discipline",
+    "tradition",
+    "full body",
+    "mental focus"
+  ],
+  "description": "Ancient combat disciplines teaching self-defense, discipline, and personal development."
+}

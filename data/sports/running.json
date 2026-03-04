@@ -1,0 +1,50 @@
+{
+  "id": "running",
+  "name": "Running",
+  "category": "individual",
+  "difficulty": "beginner",
+  "intensity": "high",
+  "environment": "outdoor",
+  "social": "mixed",
+  "barrierToEntry": {
+    "cost": "$",
+    "gear": ["Running shoes", "comfortable clothing"],
+    "learningCurve": "gentle"
+  },
+  "fitnessROI": {
+    "primaryMuscles": ["legs", "core", "cardiovascular system"],
+    "cardio": "high",
+    "strength": "medium",
+    "flexibility": "low",
+    "benefits": [
+      "cardiovascular health",
+      "weight management",
+      "mental clarity",
+      "endurance building",
+      "accessible anywhere"
+    ],
+    "caloriesBurned": {
+      "per30Min": 300,
+      "per60Min": 600,
+      "perHour": 600,
+      "notes": "Based on 6 mph running pace for 155lb person"
+    }
+  },
+  "vibeCheck": {
+    "community": "mixed",
+    "culture": "Running communities range from competitive racing groups to casual social runs. There's a place for everyone, from solo runners to club members.",
+    "bestFor": [
+      "cardio enthusiasts",
+      "stress relief seekers",
+      "goal-oriented people",
+      "those who need flexible exercise options"
+    ]
+  },
+  "timeCommitment": {
+    "sessionLength": "20-60 min",
+    "frequency": "3-5x/week",
+    "travelRequired": "none"
+  },
+  "tags": ["cardio", "accessible", "weight loss", "mental health", "outdoor"],
+  "description": "The most accessible cardiovascular exercise that can be done almost anywhere with minimal equipment."
+}

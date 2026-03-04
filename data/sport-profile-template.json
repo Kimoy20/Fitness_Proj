@@ -1,0 +1,116 @@
+{
+  "id": "unique-sport-identifier",
+  "name": "Sport Name",
+  "category": "individual|team|water|winter|combat|extreme",
+  "difficulty": "beginner|intermediate|advanced",
+  "intensity": "low|medium|high",
+  "environment": "indoor|outdoor|both",
+  "social": "solitary|small_group|large_group|mixed",
+  "barrierToEntry": {
+    "cost": "$|$$|$$$|$$$$",
+    "gear": ["essential", "equipment", "list"],
+    "learningCurve": "steep|moderate|gentle"
+  },
+  "fitnessROI": {
+    "primaryMuscles": ["muscle", "groups"],
+    "cardio": "low|medium|high",
+    "strength": "low|medium|high",
+    "flexibility": "low|medium|high",
+    "benefits": ["health", "benefits", "list"],
+    "caloriesBurned": {
+      "per30Min": 150,
+      "per60Min": 300,
+      "perHour": 300,
+      "notes": "Based on 155lb person, moderate intensity"
+    }
+  },
+  "vibeCheck": {
+    "community": "competitive|casual|supportive|intense",
+    "culture": "description of the sport's culture and community",
+    "bestFor": ["personality", "types", "that", "enjoy", "this"]
+  },
+  "timeCommitment": {
+    "sessionLength": "30-60 min|60-90 min|90+ min",
+    "frequency": "1-2x/week|3-4x/week|5+x/week",
+    "travelRequired": "none|minimal|moderate|significant"
+  },
+  "tags": ["relevant", "tags", "for", "searching"],
+  "nutrition": {
+    "dailyCalories": 2500,
+    "protein": "120g",
+    "carbs": "300g",
+    "fat": "80g",
+    "hydration": "3-4 liters",
+    "preWorkout": {
+      "timing": "1-2 hours before",
+      "foods": ["banana", "oatmeal", "toast with peanut butter"],
+      "purpose": "Energy and endurance"
+    },
+    "postWorkout": {
+      "timing": "Within 30-60 minutes",
+      "foods": ["protein shake", "chicken breast", "quinoa", "sweet potato"],
+      "purpose": "Muscle recovery and glycogen replenishment"
+    },
+    "mealPlan": {
+      "breakfast": [
+        {
+          "name": "Protein Oatmeal",
+          "ingredients": [
+            "1 cup oats",
+            "1 scoop protein powder",
+            "1 banana",
+            "1 tbsp almond butter"
+          ],
+          "calories": 450,
+          "protein": 35,
+          "carbs": 55,
+          "fat": 12
+        }
+      ],
+      "lunch": [
+        {
+          "name": "Grilled Chicken Salad",
+          "ingredients": [
+            "6oz chicken breast",
+            "mixed greens",
+            "quinoa",
+            "avocado",
+            "olive oil"
+          ],
+          "calories": 550,
+          "protein": 45,
+          "carbs": 40,
+          "fat": 25
+        }
+      ],
+      "dinner": [
+        {
+          "name": "Salmon with Vegetables",
+          "ingredients": [
+            "6oz salmon",
+            "brown rice",
+            "broccoli",
+            "sweet potato"
+          ],
+          "calories": 600,
+          "protein": 40,
+          "carbs": 60,
+          "fat": 20
+        }
+      ],
+      "snacks": [
+        {
+          "name": "Greek Yogurt with Berries",
+          "ingredients": ["1 cup Greek yogurt", "mixed berries", "honey"],
+          "calories": 200,
+          "protein": 20,
+          "carbs": 25,
+          "fat": 5
+        }
+      ]
+    },
+    "supplements": ["whey protein", "creatine", "multivitamin"],
+    "notes": "Adjust portions based on individual goals and body weight"
+  },
+  "description": "Brief, engaging description of the sport"
+}

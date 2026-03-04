@@ -1,0 +1,51 @@
+{
+  "id": "cycling",
+  "name": "Cycling",
+  "category": "individual",
+  "difficulty": "beginner",
+  "intensity": "medium",
+  "environment": "both",
+  "social": "mixed",
+  "barrierToEntry": {
+    "cost": "$$$",
+    "gear": ["Bicycle", "Helmet", "Cycling clothing"],
+    "learningCurve": "gentle"
+  },
+  "fitnessROI": {
+    "primaryMuscles": ["legs", "glutes", "core", "cardiovascular system"],
+    "cardio": "high",
+    "strength": "medium",
+    "flexibility": "low",
+    "benefits": [
+      "low impact cardio",
+      "leg strength",
+      "endurance",
+      "exploration",
+      "transportation"
+    ],
+    "caloriesBurned": {
+      "per30Min": 250,
+      "per60Min": 500,
+      "perHour": 500,
+      "notes": "Based on moderate cycling (12-14 mph) for 155lb person"
+    }
+  },
+  "vibeCheck": {
+    "community": "mixed",
+    "culture": "Cycling has diverse communities from competitive racers to casual weekend riders. Most groups are welcoming to newcomers and focus on safety and enjoyment.",
+    "bestFor": [
+      "nature lovers",
+      "commuters",
+      "low impact cardio seekers",
+      "adventure seekers",
+      "eco-conscious individuals"
+    ]
+  },
+  "timeCommitment": {
+    "sessionLength": "30-120 min",
+    "frequency": "2-4x/week",
+    "travelRequired": "minimal"
+  },
+  "tags": ["low impact", "cardio", "outdoor", "transportation", "adventure"],
+  "description": "Low-impact cardiovascular exercise that doubles as transportation and exploration."
+}

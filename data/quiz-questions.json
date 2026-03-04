@@ -1,0 +1,144 @@
+{
+  "questions": [
+    {
+      "id": "social_preference",
+      "question": "How do you prefer to exercise?",
+      "type": "single",
+      "options": [
+        {
+          "value": "solitary",
+          "text": "I prefer working out alone",
+          "weights": {
+            "social": ["solitary"]
+          }
+        },
+        {
+          "value": "small_group",
+          "text": "I like small groups (2-4 people)",
+          "weights": {
+            "social": ["small_group", "mixed"]
+          }
+        },
+        {
+          "value": "large_group",
+          "text": "I enjoy big classes and teams",
+          "weights": {
+            "social": ["large_group", "team"]
+          }
+        }
+      ]
+    },
+    {
+      "id": "environment",
+      "question": "Where do you want to be active?",
+      "type": "single",
+      "options": [
+        {
+          "value": "indoor",
+          "text": "Indoors, climate controlled",
+          "weights": {
+            "environment": ["indoor"]
+          }
+        },
+        {
+          "value": "outdoor",
+          "text": "Outdoors, in nature",
+          "weights": {
+            "environment": ["outdoor"]
+          }
+        },
+        {
+          "value": "both",
+          "text": "I'm flexible",
+          "weights": {
+            "environment": ["both", "outdoor", "indoor"]
+          }
+        }
+      ]
+    },
+    {
+      "id": "intensity",
+      "question": "What's your preferred intensity level?",
+      "type": "single",
+      "options": [
+        {
+          "value": "low",
+          "text": "Gentle and relaxing",
+          "weights": {
+            "intensity": ["low"]
+          }
+        },
+        {
+          "value": "medium",
+          "text": "Moderate challenge",
+          "weights": {
+            "intensity": ["medium"]
+          }
+        },
+        {
+          "value": "high",
+          "text": "High intensity, push my limits",
+          "weights": {
+            "intensity": ["high"]
+          }
+        }
+      ]
+    },
+    {
+      "id": "budget",
+      "question": "What's your budget for getting started?",
+      "type": "single",
+      "options": [
+        {
+          "value": "minimal",
+          "text": "Under $50",
+          "weights": {
+            "cost": ["$"]
+          }
+        },
+        {
+          "value": "moderate",
+          "text": "$50-200",
+          "weights": {
+            "cost": ["$", "$$"]
+          }
+        },
+        {
+          "value": "flexible",
+          "text": "$200+",
+          "weights": {
+            "cost": ["$$", "$$$", "$$$$"]
+          }
+        }
+      ]
+    },
+    {
+      "id": "time",
+      "question": "How much time can you commit per session?",
+      "type": "single",
+      "options": [
+        {
+          "value": "short",
+          "text": "30 minutes or less",
+          "weights": {
+            "sessionLength": ["30-60 min"]
+          }
+        },
+        {
+          "value": "medium",
+          "text": "60-90 minutes",
+          "weights": {
+            "sessionLength": ["60-90 min"]
+          }
+        },
+        {
+          "value": "long",
+          "text": "90+ minutes",
+          "weights": {
+            "sessionLength": ["90+ min"]
+          }
+        }
+      ]
+    }
+  ]
+}

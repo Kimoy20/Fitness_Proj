@@ -1,0 +1,56 @@
+{
+  "id": "swimming",
+  "name": "Swimming",
+  "category": "individual",
+  "difficulty": "beginner",
+  "intensity": "medium",
+  "environment": "both",
+  "social": "solitary",
+  "barrierToEntry": {
+    "cost": "$$",
+    "gear": ["Swimsuit", "Goggles", "Swim cap"],
+    "learningCurve": "gentle"
+  },
+  "fitnessROI": {
+    "primaryMuscles": ["full body", "core", "shoulders", "back", "legs"],
+    "cardio": "high",
+    "strength": "medium",
+    "flexibility": "medium",
+    "benefits": [
+      "low impact on joints",
+      "improves lung capacity",
+      "full body workout",
+      "stress relief"
+    ],
+    "caloriesBurned": {
+      "per30Min": 220,
+      "per60Min": 440,
+      "perHour": 440,
+      "notes": "Based on moderate freestyle swimming for 155lb person"
+    }
+  },
+  "vibeCheck": {
+    "community": "casual",
+    "culture": "Swimming communities are generally welcoming and focused on personal improvement. Lane swimming etiquette is important, but most swimmers are respectful of different skill levels.",
+    "bestFor": [
+      "people seeking low-impact exercise",
+      "those who enjoy meditative movement",
+      "cross-training athletes",
+      "stress relief seekers"
+    ]
+  },
+  "timeCommitment": {
+    "sessionLength": "30-60 min",
+    "frequency": "2-4x/week",
+    "travelRequired": "minimal"
+  },
+  "tags": [
+    "low impact",
+    "full body",
+    "cardio",
+    "meditative",
+    "indoor",
+    "outdoor"
+  ],
+  "description": "Full-body, low-impact exercise perfect for all fitness levels and ages."
+}
