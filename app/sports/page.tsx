@@ -1011,15 +1011,31 @@ export default function SportsPage() {
           ],
         };
       }
-      return `I can help you with weight-related fitness goals! Whether you want to lose weight, gain muscle, or maintain your current weight, the key is finding the right balance of exercise and nutrition. For effective weight management, combine regular cardiovascular exercise with strength training, and focus on whole foods with appropriate protein intake.\n\nTell me your current weight and goal weight, and I can create a specific plan for you. Or if you'd like, I can recommend the best exercises for your current fitness level and goals.`;
+      return {
+        content: `I can help you with weight-related fitness goals! Whether you want to lose weight, gain muscle, or maintain your current weight, the key is finding the right balance of exercise and nutrition. For effective weight management, combine regular cardiovascular exercise with strength training, and focus on whole foods with appropriate protein intake.\n\nTell me your current weight and goal weight, and I can create a specific plan for you. Or if you'd like, I can recommend the best exercises for your current fitness level and goals.`,
+      };
     }
 
     if (analysis.isExerciseRelated && analysis.isBeginnerRelated) {
-      return `Starting your fitness journey is exciting! As a beginner, I recommend starting with 2-3 sessions per week of 20-30 minutes each. The best beginner activities are yoga (builds flexibility and body awareness), swimming (full-body, low impact), and light running or walking (builds cardiovascular base).\n\nFocus on consistency over intensity - it's better to do shorter, regular workouts than occasional intense sessions. Start with bodyweight exercises before adding weights, and always warm up for 5-10 minutes before exercising.\n\nFor equipment, you'll just need comfortable clothes and good shoes to start. As you progress, you might want a yoga mat, resistance bands, or eventually a gym membership.\n\nWhat type of exercise interests you most, or do you have any specific concerns about starting?`;
+      return {
+        content: `Starting your fitness journey is exciting! As a beginner, I recommend starting with 2-3 sessions per week of 20-30 minutes each. The best beginner activities are yoga (builds flexibility and body awareness), swimming (full-body, low impact), and light running or walking (builds cardiovascular base).\n\nFocus on consistency over intensity - it's better to do shorter, regular workouts than occasional intense sessions. Start with bodyweight exercises before adding weights, and always warm up for 5-10 minutes before exercising.\n\nFor equipment, you'll just need comfortable clothes and good shoes to start. As you progress, you might want a yoga mat, resistance bands, or eventually a gym membership.\n\nWhat type of exercise interests you most, or do you have any specific concerns about starting?`,
+        followUpChoices: [
+          "I want to lose weight",
+          "I want to build muscle",
+          "What's the best beginner option?",
+        ],
+      };
     }
 
     if (analysis.isNutritionRelated) {
-      return `Proper nutrition is essential for fitness success! For general fitness, aim for a balanced diet with 45-65% carbohydrates, 20-35% healthy fats, and 1.2-2.2g of protein per kg of bodyweight daily.\n\nPre-workout nutrition (30-90 minutes before): Focus on complex carbs like oatmeal, banana, or whole grain toast for sustained energy, with moderate protein.\n\nPost-workout nutrition (within 30-60 minutes): Combine protein for muscle repair (chicken, eggs, protein shake) with carbs to replenish energy (rice, sweet potato, fruit).\n\nHydration is crucial - aim for 2-3+ liters daily, more if you're exercising intensely. For weight loss, create a 500-calorie daily deficit through diet and exercise. For muscle gain, aim for a 300-500 calorie surplus with emphasis on protein timing.\n\nWhat specific nutrition goals are you working toward?`;
+      return {
+        content: `Proper nutrition is essential for fitness success! For general fitness, aim for a balanced diet with 45-65% carbohydrates, 20-35% healthy fats, and 1.2-2.2g of protein per kg of bodyweight daily.\n\nPre-workout nutrition (30-90 minutes before): Focus on complex carbs like oatmeal, banana, or whole grain toast for sustained energy, with moderate protein.\n\nPost-workout nutrition (within 30-60 minutes): Combine protein for muscle repair (chicken, eggs, protein shake) with carbs to replenish energy (rice, sweet potato, fruit).\n\nHydration is crucial - aim for 2-3+ liters daily, more if you're exercising intensely. For weight loss, create a 500-calorie daily deficit through diet and exercise. For muscle gain, aim for a 300-500 calorie surplus with emphasis on protein timing.\n\nWhat specific nutrition goals are you working toward?`,
+        followUpChoices: [
+          "I want to lose weight",
+          "I want to build muscle",
+          "What's the best beginner option?",
+        ],
+      };
     }
 
     if (analysis.isSportSpecific) {
@@ -1039,32 +1055,68 @@ export default function SportsPage() {
 
       for (const [sport, description] of Object.entries(sportMap)) {
         if (message.includes(sport)) {
-          return (
-            description +
-            "\n\nWould you like more specific guidance on getting started with this activity?"
-          );
+          return {
+            content:
+              description +
+              "\n\nWould you like more specific guidance on getting started with this activity?",
+            followUpChoices: ["Yes, please", "No, thank you"],
+          };
         }
       }
     }
 
     if (analysis.isInjuryRelated) {
-      return `Injury prevention and management is crucial for long-term fitness success. Always warm up for 5-10 minutes before exercise with dynamic stretching, and cool down with static stretches afterward.\n\nListen to your body - sharp pain means stop immediately, while muscle soreness is normal. If you have existing injuries, focus on low-impact activities like swimming or cycling, and consider consulting a physical therapist.\n\nFor injury prevention, prioritize proper form over weight or speed, gradually increase intensity, and ensure adequate rest between workouts. Strength training actually helps prevent future injuries by supporting joints and improving balance.\n\nDo you have a specific injury concern, or are you looking for general prevention strategies?`;
+      return {
+        content: `Injury prevention and management is crucial for long-term fitness success. Always warm up for 5-10 minutes before exercise with dynamic stretching, and cool down with static stretches afterward.\n\nListen to your body - sharp pain means stop immediately, while muscle soreness is normal. If you have existing injuries, focus on low-impact activities like swimming or cycling, and consider consulting a physical therapist.\n\nFor injury prevention, prioritize proper form over weight or speed, gradually increase intensity, and ensure adequate rest between workouts. Strength training actually helps prevent future injuries by supporting joints and improving balance.\n\nDo you have a specific injury concern, or are you looking for general prevention strategies?`,
+        followUpChoices: [
+          "I have a specific injury concern",
+          "I'm looking for general prevention strategies",
+        ],
+      };
     }
 
     if (analysis.isMotivationRelated) {
-      return `Staying motivated is one of the biggest fitness challenges! Set SMART goals - Specific, Measurable, Achievable, Relevant, and Time-bound. For example: "Run 3x per week for 30 minutes for 4 weeks."\n\nBuild habits by scheduling workouts like appointments and starting small (10-15 minutes) if needed. Stay accountable by finding a workout partner or joining fitness communities. Make it enjoyable by choosing activities you genuinely like and mixing up routines to prevent boredom.\n\nRemember that missing one workout isn\'t failure - focus on consistency over perfection. When motivation drops, just start with lower intensity rather than skipping entirely. Track your progress to see how far you\'ve come, and celebrate non-scale victories like increased energy or better sleep.\n\nWhat\'s your biggest motivation challenge?`;
+      return {
+        content: `Staying motivated is one of the biggest fitness challenges! Set SMART goals - Specific, Measurable, Achievable, Relevant, and Time-bound. For example: "Run 3x per week for 30 minutes for 4 weeks."\n\nBuild habits by scheduling workouts like appointments and starting small (10-15 minutes) if needed. Stay accountable by finding a workout partner or joining fitness communities. Make it enjoyable by choosing activities you genuinely like and mixing up routines to prevent boredom.\n\nRemember that missing one workout isn't failure - focus on consistency over perfection. When motivation drops, just start with lower intensity rather than skipping entirely. Track your progress to see how far you've come, and celebrate non-scale victories like increased energy or better sleep.\n\nWhat's your biggest motivation challenge?`,
+        followUpChoices: [
+          "I struggle with consistency",
+          "I get bored with my routine",
+          "I need help setting SMART goals",
+        ],
+      };
     }
 
     if (analysis.isTimeRelated || analysis.isScheduleRelated) {
-      return `Busy schedules make fitness challenging but definitely manageable! Time-efficient workouts include HIIT (20 minutes = 40 minutes traditional cardio), circuit training (full body in 30 minutes), and shorter yoga sessions (15-20 minutes for flexibility).\n\nStrategic scheduling helps - morning workouts have fewer excuses, lunch break sessions work for some, and weekend longer sessions can make up for busy weekdays. You can also split workouts into 15-minute morning and evening sessions.\n\nHome workouts eliminate travel time - bodyweight exercises, resistance bands, and yoga mats require minimal space. Plan your workouts in advance and treat them like important appointments.\n\nHow much time can you realistically commit to exercise daily or weekly?`;
+      return {
+        content: `Busy schedules make fitness challenging but definitely manageable! Time-efficient workouts include HIIT (20 minutes = 40 minutes traditional cardio), circuit training (full body in 30 minutes), and shorter yoga sessions (15-20 minutes for flexibility).\n\nStrategic scheduling helps - morning workouts have fewer excuses, lunch break sessions work for some, and weekend longer sessions can make up for busy weekdays. You can also split workouts into 15-minute morning and evening sessions.\n\nHome workouts eliminate travel time - bodyweight exercises, resistance bands, and yoga mats require minimal space. Plan your workouts in advance and treat them like important appointments.\n\nHow much time can you realistically commit to exercise daily or weekly?`,
+        followUpChoices: [
+          "I have less than 30 minutes daily",
+          "I prefer morning workouts",
+          "I need help with time management",
+        ],
+      };
     }
 
     if (analysis.isAgeRelated) {
-      return `Fitness is important at every age! For teens (16-25), focus on building habits and trying multiple sports. Adults (26-45) should balance strength, cardio, and flexibility. Middle age (46-65) should emphasize maintaining muscle mass and joint health with low-impact options. Seniors (65+) benefit from balance, flexibility, and social fitness components.\n\nRegardless of age, start slowly and progress gradually, listen to your body, focus on consistency over intensity, and consult doctors before starting new programs. The key is adapting activities to your current fitness level and any physical limitations.\n\nWhat age group are you asking about, or do you have age-specific concerns?`;
+      return {
+        content: `Fitness is important at every age! For teens (16-25), focus on building habits and trying multiple sports. Adults (26-45) should balance strength, cardio, and flexibility. Middle age (46-65) should emphasize maintaining muscle mass and joint health with low-impact options. Seniors (65+) benefit from balance, flexibility, and social fitness components.\n\nRegardless of age, start slowly and progress gradually, listen to your body, focus on consistency over intensity, and consult doctors before starting new programs. The key is adapting activities to your current fitness level and any physical limitations.\n\nWhat age group are you asking about, or do you have age-specific concerns?`,
+        followUpChoices: [
+          "I'm a teen (16-25)",
+          "I'm an adult (26-45)",
+          "I'm middle-aged (46-65)",
+          "I'm a senior (65+)",
+        ],
+      };
     }
 
     if (analysis.isEquipmentRelated) {
-      return `Equipment needs vary by activity and budget. Budget-friendly options include yoga ($20-30 mat) and running ($80-120 shoes). Moderate investments include swimming ($50-100 for suit/goggles) and gym memberships ($30-60 monthly). Higher-end options include cycling ($300+ for bike) and rock climbing ($200+ for gear).\n\nFor home gyms, start with essentials: yoga mat, resistance bands ($15-25), and adjustable dumbbells ($1-2 per pound). Money-saving tips include buying used equipment, looking for gym deals, and investing in quality shoes first.\n\nWhat\'s your budget range, and which activities interest you most?`;
+      return {
+        content: `Equipment needs vary by activity and budget. Budget-friendly options include yoga ($20-30 mat) and running ($80-120 shoes). Moderate investments include swimming ($50-100 for suit/goggles) and gym memberships ($30-60 monthly). Higher-end options include cycling ($300+ for bike) and rock climbing ($200+ for gear).\n\nFor home gyms, start with essentials: yoga mat, resistance bands ($15-25), and adjustable dumbbells ($1-2 per pound). Money-saving tips include buying used equipment, looking for gym deals, and investing in quality shoes first.\n\nWhat's your budget range, and which activities interest you most?`,
+        followUpChoices: [
+          "I have a low budget (<$50)",
+          "I have a moderate budget ($50-$200)",
+          "I have a high budget (>$200)",
+        ],
     }
 
     // General fitness intelligence
@@ -1157,7 +1209,7 @@ export default function SportsPage() {
 
   const generateBotResponseWithSearch = async (
     userMessage: string,
-  ): Promise<string> => {
+  ): Promise<{ content: string; followUpChoices?: string[] }> => {
     const message = userMessage.toLowerCase();
 
     // Check if the question requires current online information
@@ -1182,12 +1234,24 @@ export default function SportsPage() {
         !onlineInfo.includes("couldn't find") &&
         !onlineInfo.includes("trouble accessing")
       ) {
-        return `${onlineInfo}\n\nBased on this current information, here's how it applies to fitness:\n\n${generateBotResponse(userMessage)}`;
+        return {
+          content: `${onlineInfo}\n\nBased on this current information, here's how it applies to fitness:\n\n${(await generateBotResponse(userMessage)).content}`,
+          followUpChoices: (await generateBotResponse(userMessage))
+            .followUpChoices,
+        };
       }
     }
 
     // Fall back to knowledge base for other questions
-    return generateBotResponse(userMessage);
+    const botResponse = generateBotResponse(userMessage);
+    return {
+      content:
+        typeof botResponse === "string" ? botResponse : botResponse.content,
+      followUpChoices:
+        typeof botResponse === "string"
+          ? undefined
+          : botResponse.followUpChoices,
+    };
   };
 
   const detectPersonalInfoNeeded = (message: string): boolean => {
@@ -1967,7 +2031,7 @@ export default function SportsPage() {
                   className="flex-1 px-3 py-2 border border-gray-300 rounded-xl focus:outline-none focus:ring-2 focus:ring-purple-500 text-sm text-gray-900 placeholder-gray-500"
                 />
                 <button
-                  onClick={sendMessage}
+                  onClick={() => sendMessage(false)}
                   className="p-2 bg-gradient-to-r from-purple-600 to-blue-600 text-white rounded-xl hover:shadow-lg transition-all"
                 >
                   <svg
