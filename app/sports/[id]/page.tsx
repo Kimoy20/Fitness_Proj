@@ -1336,6 +1336,164 @@ export default function SportDetailPage() {
   const params = useParams();
   const sportId = params.id as string;
   const [isFavorited, setIsFavorited] = useState(false);
+  const [dailyBudget, setDailyBudget] = useState<number>(50);
+
+  // Budget-based meal filtering logic
+  const estimateMealCost = (
+    mealName: string,
+    ingredients: string[],
+  ): number => {
+    // Simple cost estimation based on ingredient complexity
+    const costPerIngredient = 1.5; // Average cost per ingredient
+    const baseCost = 2; // Base cost for preparation
+    return baseCost + ingredients.length * costPerIngredient;
+  };
+
+  const getBudgetFriendlyMeals = (meals: any[], budget: number) => {
+    return meals.map((meal) => ({
+      ...meal,
+      estimatedCost: estimateMealCost(meal.name, meal.ingredients),
+      withinBudget:
+        estimateMealCost(meal.name, meal.ingredients) <= budget * 0.25, // 25% of daily budget per meal
+    }));
+  };
+
+  const getTotalDailyCost = (
+    breakfast: any[],
+    lunch: any[],
+    dinner: any[],
+    snacks: any[],
+  ) => {
+    const breakfastCost = breakfast[0]
+      ? estimateMealCost(breakfast[0].name, breakfast[0].ingredients)
+      : 0;
+    const lunchCost = lunch[0]
+      ? estimateMealCost(lunch[0].name, lunch[0].ingredients)
+      : 0;
+    const dinnerCost = dinner[0]
+      ? estimateMealCost(dinner[0].name, dinner[0].ingredients)
+      : 0;
+    const snacksCost = snacks[0]
+      ? estimateMealCost(snacks[0].name, snacks[0].ingredients)
+      : 0;
+    return breakfastCost + lunchCost + dinnerCost + snacksCost;
+  };
+
+  const getBudgetFriendlyAlternatives = (mealType: string, budget: number) => {
+    const alternatives = {
+      breakfast: [
+        {
+          name: "Oatmeal with Banana",
+          ingredients: ["oats", "banana", "honey"],
+          calories: 300,
+          protein: 8,
+          carbs: 60,
+          fat: 5,
+        },
+        {
+          name: "Eggs on Toast",
+          ingredients: ["2 eggs", "whole wheat toast"],
+          calories: 250,
+          protein: 15,
+          carbs: 30,
+          fat: 10,
+        },
+        {
+          name: "Yogurt Parfait",
+          ingredients: ["Greek yogurt", "granola", "berries"],
+          calories: 280,
+          protein: 12,
+          carbs: 45,
+          fat: 8,
+        },
+      ],
+      lunch: [
+        {
+          name: "Rice and Beans",
+          ingredients: ["brown rice", "black beans", "spices"],
+          calories: 400,
+          protein: 12,
+          carbs: 70,
+          fat: 8,
+        },
+        {
+          name: "Tuna Sandwich",
+          ingredients: ["canned tuna", "whole wheat bread", "lettuce"],
+          calories: 350,
+          protein: 25,
+          carbs: 40,
+          fat: 12,
+        },
+        {
+          name: "Pasta with Vegetables",
+          ingredients: ["pasta", "tomato sauce", "mixed vegetables"],
+          calories: 380,
+          protein: 10,
+          carbs: 65,
+          fat: 8,
+        },
+      ],
+      dinner: [
+        {
+          name: "Chicken Stir-Fry",
+          ingredients: ["chicken breast", "vegetables", "rice"],
+          calories: 450,
+          protein: 35,
+          carbs: 50,
+          fat: 15,
+        },
+        {
+          name: "Lentil Soup",
+          ingredients: ["lentils", "vegetables", "broth"],
+          calories: 320,
+          protein: 18,
+          carbs: 55,
+          fat: 8,
+        },
+        {
+          name: "Egg Fried Rice",
+          ingredients: ["eggs", "rice", "vegetables", "soy sauce"],
+          calories: 380,
+          protein: 15,
+          carbs: 60,
+          fat: 12,
+        },
+      ],
+      snacks: [
+        {
+          name: "Apple with Peanut Butter",
+          ingredients: ["apple", "peanut butter"],
+          calories: 200,
+          protein: 6,
+          carbs: 25,
+          fat: 12,
+        },
+        {
+          name: "Trail Mix",
+          ingredients: ["nuts", "raisins", "seeds"],
+          calories: 250,
+          protein: 8,
+          carbs: 30,
+          fat: 15,
+        },
+        {
+          name: "Hard Boiled Eggs",
+          ingredients: ["2 eggs", "salt"],
+          calories: 140,
+          protein: 12,
+          carbs: 2,
+          fat: 10,
+        },
+      ],
+    };
+
+    return (
+      (alternatives as any)[mealType]?.filter(
+        (meal) =>
+          estimateMealCost(meal.name, meal.ingredients) <= budget * 0.25,
+      ) || []
+    );
+  };
 
   const sport = sportData[sportId];
 
@@ -1709,96 +1867,6 @@ export default function SportDetailPage() {
                     {sport.nutrition.mealPlan.breakfast.map((meal, index) => (
                       <div key={index} className="bg-gray-50 rounded-lg p-4">
                         <div className="font-medium text-gray-900 mb-2 text-lg">
-                          {meal.name}
-                        </div>
-                        <div className="text-xs text-gray-600 mb-2">
-                          {meal.ingredients.join(", ")}
-                        </div>
-                        <div className="flex gap-4 text-xs">
-                          <span className="text-green-600">
-                            {meal.calories} cal
-                          </span>
-                          <span className="text-blue-600">
-                            {meal.protein}g protein
-                          </span>
-                          <span className="text-orange-600">
-                            {meal.carbs}g carbs
-                          </span>
-                          <span className="text-purple-600">
-                            {meal.fat}g fat
-                          </span>
-                        </div>
-                      </div>
-                    ))}
-                  </div>
-
-                  <div>
-                    <h4 className="font-semibold text-gray-900 mb-2">
-                      ☀️ Lunch
-                    </h4>
-                    {sport.nutrition.mealPlan.lunch.map((meal, index) => (
-                      <div key={index} className="bg-gray-50 rounded-lg p-3">
-                        <div className="font-medium text-gray-900 mb-1">
-                          {meal.name}
-                        </div>
-                        <div className="text-xs text-gray-600 mb-2">
-                          {meal.ingredients.join(", ")}
-                        </div>
-                        <div className="flex gap-4 text-xs">
-                          <span className="text-green-600">
-                            {meal.calories} cal
-                          </span>
-                          <span className="text-blue-600">
-                            {meal.protein}g protein
-                          </span>
-                          <span className="text-orange-600">
-                            {meal.carbs}g carbs
-                          </span>
-                          <span className="text-purple-600">
-                            {meal.fat}g fat
-                          </span>
-                        </div>
-                      </div>
-                    ))}
-                  </div>
-
-                  <div>
-                    <h4 className="font-semibold text-gray-900 mb-2">
-                      🌙 Dinner
-                    </h4>
-                    {sport.nutrition.mealPlan.dinner.map((meal, index) => (
-                      <div key={index} className="bg-gray-50 rounded-lg p-3">
-                        <div className="font-medium text-gray-900 mb-1">
-                          {meal.name}
-                        </div>
-                        <div className="text-xs text-gray-600 mb-2">
-                          {meal.ingredients.join(", ")}
-                        </div>
-                        <div className="flex gap-4 text-xs">
-                          <span className="text-green-600">
-                            {meal.calories} cal
-                          </span>
-                          <span className="text-blue-600">
-                            {meal.protein}g protein
-                          </span>
-                          <span className="text-orange-600">
-                            {meal.carbs}g carbs
-                          </span>
-                          <span className="text-purple-600">
-                            {meal.fat}g fat
-                          </span>
-                        </div>
-                      </div>
-                    ))}
-                  </div>
-
-                  <div>
-                    <h4 className="font-semibold text-gray-900 mb-2">
-                      🍿 Snacks
-                    </h4>
-                    {sport.nutrition.mealPlan.snacks.map((meal, index) => (
-                      <div key={index} className="bg-gray-50 rounded-lg p-3">
-                        <div className="font-medium text-gray-900 mb-1">
                           {meal.name}
                         </div>
                         <div className="text-xs text-gray-600 mb-2">
