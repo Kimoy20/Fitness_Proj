@@ -1489,8 +1489,14 @@ export default function SportDetailPage() {
 
     return (
       (alternatives as any)[mealType]?.filter(
-        (meal) =>
-          estimateMealCost(meal.name, meal.ingredients) <= budget * 0.25,
+        (meal: {
+          name: string;
+          ingredients: string[];
+          calories: number;
+          protein: number;
+          carbs: number;
+          fat: number;
+        }) => estimateMealCost(meal.name, meal.ingredients) <= budget * 0.25,
       ) || []
     );
   };
